@@ -1,0 +1,10 @@
+services:
+  user-service: 
+    build: .
+    volumes:
+      - /app/node_modules
+    ports:
+      - "4000:4000"
+    command: npm run start
+    environment:
+      - JWT_SECRET=user-service-secret
