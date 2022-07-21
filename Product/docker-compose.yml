@@ -1,0 +1,10 @@
+services:
+  product-service: 
+    build: .
+    volumes:
+      - /app/node_modules
+    ports:
+      - "4001:4001"
+    command: npm run start
+    environment:
+      - JWT_SECRET=product-service-secret
